@@ -28,6 +28,7 @@ h1 {
       border: none;
       border-radius: 5px;
       cursor: pointer;
+       font-family: 'Courier New', Courier, monospace;
     }
     #restartBtn:hover {
       background-color: #1e3d47;
