@@ -32,6 +32,18 @@ infoDiv.appendChild(movesPara);
       matchedDisplay.textContent = gameState.matchedPairs.map(pair => pair.join(' & ')).join(' | ');
     }
   }
+  function showWinScreen() {
+  const winOverlay = document.createElement('div');
+  winOverlay.className = 'win-screen';
+  winOverlay.innerHTML = `
+    <div class="win-message">
+      <h2>🎉 You Won!</h2>
+      <p>You found all matches in <strong>${gameState.moves}</strong> moves!</p>
+      <button onclick="window.location.reload()">🔄 Play Again</button>
+    </div>
+  `;
+  document.body.appendChild(winOverlay);
+}
 
   function createCard(symbol, index) {
     const card = document.createElement('div');
@@ -66,10 +78,10 @@ infoDiv.appendChild(movesPara);
         gameState.flippedCards = [];
         updateDisplay();
 
-        if (gameState.totalMatches === symbols.length) {
-          setTimeout(() => alert("🚀 You found all matches! You Won!"), 500);
-          setTimeout(() => alert("Click Restart to Play Again 🔃!"), 500);
-        }
+       if (gameState.totalMatches === symbols.length) {
+          setTimeout(() => showWinScreen(), 700);
+      }
+
       } else {
         setTimeout(() => {
           first.card.classList.remove('flipped');
