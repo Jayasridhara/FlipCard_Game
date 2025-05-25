@@ -1,0 +1,26 @@
+Memory Matching Game where players flip over cards to find matching pairs. It uses HTML, CSS, and JavaScript (DOM manipulation) to create a fully interactive experience.
+🚀 Features:
+Flip cards by clicking to reveal the symbol.
+
+Match pairs to keep them face-up.
+
+Non-matching cards flip back after a short delay.
+
+Displays number of moves, flipped cards, and matched pairs.
+
+Fully responsive for desktop and mobile.
+
+Restart the game anytime with the 🔄 Restart Game button.
+
+🎲 How to Play
+Click any card to flip it and reveal the symbol.
+
+Flip another card to try and match it.
+
+If the cards match, they stay flipped.
+
+If not, both cards will flip back after a short delay.
+
+Match all pairs to win the game!
+
+Click 🔄 Restart Game to play again.
